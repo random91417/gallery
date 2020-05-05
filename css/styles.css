@@ -11,13 +11,37 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+
+
 :root {
    --color--purple:rgb(74,67,104);
-   --color--purple-transparent:rgba(74,67,104, 0.5);
+   --color--purple-transparent:rgba(74,67,104, 0.7);
+   --color--white:#fff;
+   --color--dark-grey:#2e3133;
  }
 
-.nav{
-  padding: 0
+.virtical-space-20{
+  min-height: 20px;
+}
+.row{
+  margin-right: 0px !important;
+margin-left: 0px !important;
+margin-bottom: 0px !important;
+}
+.fadeInDown{
+  animation-duration: 2s;
+}
+
+
+.logo{
+  width: 140px;
+}
+.logo-large{
+  width:300px;
+}
+.logo-main{
+  width: 90px;
+  margin-right: 50px;
 }
 
 #mainNav {
@@ -37,10 +61,10 @@ font-family: 'Dancing Script', cursive;  font-weight: 700;
   padding: 0.75rem 0;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #f4623a;
+  color: #a8163f
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #f4623a !important;
+  color: #a8163f !important;
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -71,13 +95,13 @@ font-family: 'Dancing Script', cursive;  font-weight: 700;
     color: #212529;
   }
   #mainNav.navbar-scrolled .navbar-brand:hover {
-    color: #f4623a;
+    color: #a8163f
   }
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link {
     color: #212529;
   }
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
-    color: #f4623a;
+    color: #a8163f
   }
 }
 
@@ -115,16 +139,200 @@ font-family: 'Dancing Script', cursive;  font-weight: 700;
   position: absolute;
   top:0;
   left: 0;
-  background-color: var(--color--purple-transparent);
+  background-image: linear-gradient(120deg, #fccb9060 0%, #d57eeb60 100%);
+
   z-index: 1;
 }
 
+.header-content{
+  z-index: 2;
+}
+
+h3{
+  font-size:1.5rem;
+}
+
+.header-content h1{
+  font-size:3.5rem;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  color: var(--color--white);
+}
+.header-content h2{
+  font-size:1.5rem;
+font-family: 'Dancing Script', cursive;
+ color: var(--color--white);
+ text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header-content h1{
+    font-size:7rem;
+  }
+  h3{
+    font-size:4rem;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .header-content h1{
+    font-size:12rem;
+  }
+  h3{
+    font-size:4rem;
+  }
+
+}
+
+.section-title{
+  text-align: center;
+}
+
+
+
+.imgs-grid{
+  display: grid;
+}
+.top{
+  grid-column: 1;
+   grid-row: 1;
+  -webkit-animation: changeImg 10s infinite;
+  animation: changeImg 10s infinite;
+  animation-delay: 1s;
+
+
+}
+.bottom{
+  grid-column: 1;
+  grid-row: 1;
+  z-index: -100
+}
+
+
+#order{
+  background-color: #a8163f;
+  padding: 2%;
+
+}
+#order h2{
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+}
+#order p{
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  padding: 5px;
+}
+
+
+
+.social a{
+  color:#ffffff70;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 10px;
+}
+.social a:hover{
+  color:#fff;
+}
+
+.hours{
+  font-size: 1.5rem !important
+}
+
+footer{
+  background-color:  #2e3133;
+
+}
+
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+  text-align: center;
+  border-bottom: 3px solid #fff;
+}
+
+.services .icon-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box img{
+  width:100%;
+  padding-bottom: 20px;
+}
+
+.services .icon i {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .title a {
+  color: #111;
+}
+
+.services .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.services .icon-box-pink .icon i {
+  color: #ff689b;
+}
+
+.services .icon-box-pink:hover {
+  border-color: #ff689b;
+}
+
+.services .icon-box-cyan .icon i {
+  color: #3fcdc7;
+}
+
+.services .icon-box-cyan:hover {
+  border-color: #3fcdc7;
+}
+
+.services .icon-box-green .icon i {
+  color: #41cf2e;
+}
+
+.services .icon-box-green:hover {
+  border-color: #41cf2e;
+}
+
+.services .icon-box-blue .icon i {
+  color: #2282ff;
+}
+
+.services .icon-box-blue:hover {
+  border-color: #2282ff;
+}
+
+
 /*
-
-
 *
 {
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
-} */
+}  */
